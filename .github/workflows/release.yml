@@ -6,9 +6,6 @@ on:
     branches:
       - develop
       - main
-  push:
-    branches:
-      - main
 
 jobs:
 
@@ -110,15 +107,15 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: Update major version on develop (if main release)
+      - name: Update develop to match main version (if main release)
         if: github.base_ref == 'main'
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git fetch origin develop
           git checkout develop
-          MAJOR=$(echo "${{ steps.bump.outputs.new }}" | cut -d. -f1)
-          NEW_MAJOR=$((MAJOR + 1))
-          NEW_VERSION="${NEW_MAJOR}.0.0"
-          sed -i "s/^version:.*/version: $NEW_VERSION/" package.yaml
+          MAIN_VERSION="${{ steps.bump.outputs.new }}"
+          sed -i "s/^version:.*/version: $MAIN_VERSION/" package.yaml
           git add package.yaml
-          git commit -m "chore: bump major version to $NEW_VERSION"
+          git commit -m "chore: sync version with main ($MAIN_VERSION)"
           git push origin develop
