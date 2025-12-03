@@ -2,7 +2,7 @@ name: Bump Version on Develop
 
 on:
   workflow_run:
-    workflows: ["Release"]
+    workflows: ["release.yml"]
     types: [completed]
     branches: [main]
 
