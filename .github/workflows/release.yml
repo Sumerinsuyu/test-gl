@@ -109,3 +109,16 @@ jobs:
             See [commits](https://github.com/${{ github.repository }}/compare/v${{ steps.version.outputs.current }}...v${{ steps.bump.outputs.new }}) for details.
           draft: false
           prerelease: false
+
+      - name: Update major version on develop (if main release)
+        if: github.base_ref == 'main'
+        run: |
+          git fetch origin develop
+          git checkout develop
+          MAJOR=$(echo "${{ steps.bump.outputs.new }}" | cut -d. -f1)
+          NEW_MAJOR=$((MAJOR + 1))
+          NEW_VERSION="${NEW_MAJOR}.0.0"
+          sed -i "s/^version:.*/version: $NEW_VERSION/" package.yaml
+          git add package.yaml
+          git commit -m "chore: bump major version to $NEW_VERSION"
+          git push origin develop
