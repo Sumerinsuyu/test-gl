@@ -1,0 +1,20 @@
+/home/sum/.ghcup/ghc/9.8.4/lib/ghc-9.8.4/lib/x86_64-linux-ghc-9.8.4/rts-1.0.2/include/ghcversion.h:
+  hash: 95162794a3bf5e6167631fdd41a509846597231d523d0f21a76713b1f801373c
+/home/sum/Documents/TEK3/Glados/FLUX/.stack-work/dist/x86_64-linux/ghc-9.8.4/build/flux/autogen/Paths_flux.hs:
+  hash: a5e803e190359c96ca708317d955ea7e303c15cae761a52c50aacbc4165425fc
+/home/sum/Documents/TEK3/Glados/FLUX/.stack-work/dist/x86_64-linux/ghc-9.8.4/build/flux/autogen/cabal_macros.h:
+  hash: eab94c8a9c3ac3e2e207c3dd8fe7f53f0dc5682ffe416bd9a00dcbe7689c13cf
+/home/sum/Documents/TEK3/Glados/FLUX/flux.cabal:
+  hash: a18bfceef87dc49c4feba32a04cbb4729e6cc28686dae8826c9792f41fa30a7d
+/home/sum/Documents/TEK3/Glados/FLUX/package.yaml:
+  hash: 883efd7b3d12684e01ecdcf756fb8a7ff1571e5321fae6422e35a943499d3552
+/home/sum/Documents/TEK3/Glados/FLUX/src/AST.hs:
+  hash: 4b4d0744223d8ca332b4d0db102791afe16e585e34f1d82c547ae6fafc491802
+/home/sum/Documents/TEK3/Glados/FLUX/src/Interpreter.hs:
+  hash: be53533ec1d90b6815a4a51ae3eded6efaaaf6f59c265b6c08dadc97b5f27a50
+/home/sum/Documents/TEK3/Glados/FLUX/src/Main.hs:
+  hash: fe8403aa59d6c57c57215449d89526c8d5bb671d1a689bcd7c34a9a285b39149
+/home/sum/Documents/TEK3/Glados/FLUX/src/Parser.hs:
+  hash: c5bfebd59bdb1ccb6abbeb5691b2dde44a677640ce730cb648650fb0b68af8b8
+/usr/include/stdc-predef.h:
+  hash: 82975831ea2d1f95b60225f37ddd6130225f0c3de2318674cb178fea661ad87b
