@@ -17,7 +17,7 @@ spec = do
         result `shouldNotBe` ""
     
     it "should handle if2.scm" $ do
-        schemeCode <- readFile "test/LispCases/If/if2.scm"
+        schemeCode <- readFile "test/LispCases/if/if2.scm"
         result <- catch (readProcess "glados" ["-lisp"] schemeCode) handleError
         result `shouldNotBe` ""
     
