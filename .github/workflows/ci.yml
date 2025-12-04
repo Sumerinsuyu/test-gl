@@ -22,6 +22,9 @@ jobs:
       - name: Run make
         run: make
 
+      - name: Run tests
+        run: stack test
+
       - name: Verify binary 'glados' exists
         run: |
           if [ ! -f "./glados" ]; then
